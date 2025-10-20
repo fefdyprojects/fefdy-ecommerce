@@ -14,13 +14,14 @@ export default function Header() {
   function handleMenuOpen() {
     setMenuState((prevState) => !prevState);
   }
+  
   return (
     <NavBar>
       <nav>
         <NavLink to="/"><h2>Fefdy</h2></NavLink>
         
         <ul>
-          <SeacrhBar />
+          <SeacrhBar  menuState={menuState}/>
           <div className={menuState ? "menu-wrapper active" : "menu-wrapper"}>
             <li id="menuClose" onClick={handleMenuOpen}>
               <LuChevronRight />

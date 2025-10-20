@@ -14,6 +14,7 @@ export const NavBar = styled.header`
     border-radius: 64px;
     align-items: center;
     justify-self: center;
+    z-index: 50;
   }
   & h2 {
     margin: unset;
@@ -39,7 +40,7 @@ export const NavBar = styled.header`
     box-shadow: 0px 0px 20px #e0e0e0ff;
     padding: 8px 16px;
     border-radius: 40px;
-    
+
     user-select: none;
     overflow: hidden;
   }
@@ -77,7 +78,12 @@ export const NavBar = styled.header`
     }
     & .menu-wrapper a {
       display: inherit;
+      width: 100%;
     }
+    & .menu-wrapper a li {
+      width: inherit;
+    }
+
     & .menu-wrapper.active {
       width: 45%;
       right: 0;
@@ -124,7 +130,6 @@ export const SeacrhContainer = styled.div`
   background: #fff;
   cursor: pointer;
   border-radius: 40px;
-  z-index: 50;
 
   & input {
     background: transparent;
@@ -133,7 +138,6 @@ export const SeacrhContainer = styled.div`
     padding: 16px 8px 16px 16px;
     width: inherit;
     border-radius: inherit;
-    z-index: 50;
   }
   & input:focus {
     outline: unset;
@@ -156,11 +160,13 @@ export const SeacrhContainer = styled.div`
       width: 90%;
       top: 90px;
       opacity: 1;
+      user-event: unset;
     }
 
     & input {
+      user-event: unset;
       position: absolute;
-      z-index: -1;
+      
       left: 50%;
       transform: translateX(-50%);
       top: 32px;
