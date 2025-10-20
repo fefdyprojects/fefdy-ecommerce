@@ -166,7 +166,7 @@ export const SeacrhContainer = styled.div`
     & input {
       user-event: unset;
       position: absolute;
-      
+      z-index:-1;
       left: 50%;
       transform: translateX(-50%);
       top: 32px;
@@ -180,6 +180,8 @@ export const SeacrhContainer = styled.div`
   @media (max-width: 425px) {
     & input.active {
       width: 60%;
+      z-index:49;
+
     }
   }
 `;
