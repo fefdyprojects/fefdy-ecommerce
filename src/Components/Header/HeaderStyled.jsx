@@ -39,10 +39,11 @@ export const NavBar = styled.header`
     box-shadow: 0px 0px 20px #e0e0e0ff;
     padding: 8px 16px;
     border-radius: 40px;
-    cursor: pointer;
+    
     user-select: none;
     overflow: hidden;
   }
+
   & li p,
   & .hamburger-icon,
   #menuClose {
@@ -64,6 +65,7 @@ export const NavBar = styled.header`
       height: 100vh;
       top: 0;
       right: -20%;
+      z-index: 51;
       justify-content: start;
       flex-flow: column nowrap;
       width: 0px;
@@ -72,6 +74,9 @@ export const NavBar = styled.header`
       backdrop-filter: blur(20px);
       padding: 40px 24px 16px 24px;
       transition: width 0.8s ease, right 0.5s ease;
+    }
+    & .menu-wrapper a {
+      display: inherit;
     }
     & .menu-wrapper.active {
       width: 45%;
@@ -95,7 +100,6 @@ export const NavBar = styled.header`
     }
     & li {
       padding: 24px;
-      
     }
     & li p {
       display: flex;
@@ -120,6 +124,7 @@ export const SeacrhContainer = styled.div`
   background: #fff;
   cursor: pointer;
   border-radius: 40px;
+  z-index: 50;
 
   & input {
     background: transparent;
@@ -127,6 +132,8 @@ export const SeacrhContainer = styled.div`
     padding-left: 16px;
     padding: 16px 8px 16px 16px;
     width: inherit;
+    border-radius: inherit;
+    z-index: 50;
   }
   & input:focus {
     outline: unset;
@@ -145,8 +152,28 @@ export const SeacrhContainer = styled.div`
     padding: unset;
     background: transparent;
 
+    input.active {
+      width: 90%;
+      top: 90px;
+      opacity: 1;
+    }
+
     & input {
-      display: none;
+      position: absolute;
+      z-index: -1;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 32px;
+      width: 60%;
+      opacity: 0;
+      background: #fff;
+      box-shadow: 0px 0px 20px #e0e0e0ff;
+      transition: width 0.2s ease, top 0.2s ease, opacity 0.1s ease;
+    }
+  }
+  @media (max-width: 425px) {
+    & input.active {
+      width: 60%;
     }
   }
 `;
