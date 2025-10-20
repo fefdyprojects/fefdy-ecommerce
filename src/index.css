@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+:root{
+    --baseblack: #1C1817;
+    --basewhite: #F9F9F8;
+    --red:#FF0000;
+    --basebg:rgba(255, 255, 255, 0.6);
+}
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
