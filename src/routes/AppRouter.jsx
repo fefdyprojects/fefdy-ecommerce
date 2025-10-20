@@ -6,7 +6,7 @@ import Categories from "../pages/Categories";
 import ProductDescription from "../pages/ProductDescription";
 import Cart from "../pages/Cart";
 import Favourites from "../pages/Favourites";
-import Favourites from "../pages/Profile";
+import Profile from "../pages/Profile";
 
 export default function AppRouter() {
   return (
